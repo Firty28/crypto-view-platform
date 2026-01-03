@@ -1,0 +1,75 @@
+.cryptoItem {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30px 1fr 1fr 1fr;
+    padding: 10px;
+    color: white;
+}
+
+.cryptoItem:hover {
+    background-color: #272727;
+}
+
+.favourites {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.cryptoInfo {
+    display: flex;
+    align-items: center;
+}
+
+.cryptoIcon {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    background-color: red;
+}
+
+.name {
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.symbol {
+    font-weight: 500;
+}
+
+.nameOriginal {
+    color: var(--text-middle-color);
+}
+
+.priceChangeWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.changeIcon {
+    width: 32px;
+    margin-right: 10px;
+}
+
+.changeUp {
+    color: var(--change-up-color);
+}
+
+.changeDown {
+    color: var(--change-down-color);
+}
+
+.priceChange {
+    text-align: end; 
+}
+
+.price {
+    text-align: end;
+}
+
+
+.priceChangePercent {
+    color: color-mix(in srgb, currentColor 65%, black);
+}

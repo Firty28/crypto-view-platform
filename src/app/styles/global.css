@@ -1,0 +1,33 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wdth,wght@75..100,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: white; */
+    font-family: "Roboto", sans-serif;
+}
+
+#root {
+    background-color: var(--bg-global-color);
+    width: 100%;
+    height: 100%;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+:root {
+    --bg-global-color: #151517;
+    --bg-middle-color: #191921;
+    --border-global-color: #46474C;
+    --change-up-color: #06D6A0;
+    --change-down-color: #EF476F;
+    --text-middle-color: #858585;
+}
