@@ -1,5 +1,6 @@
 .cryptoItem {
     display: grid;
+    gap: 10px;
     align-items: center;
     grid-template-columns: 30px 1fr 1fr 1fr;
     padding: 10px;
@@ -8,6 +9,10 @@
 
 .cryptoItem:hover {
     background-color: #272727;
+}
+
+.cryptoNameInfo {
+    margin-left: 10px;
 }
 
 .favourites {
@@ -23,10 +28,8 @@
 }
 
 .cryptoIcon {
-    width: 20px;
-    height: 20px;
-    margin: 0 10px;
-    background-color: red;
+    width: 32px;
+    height: 32px;
 }
 
 .name {
@@ -40,12 +43,17 @@
 
 .nameOriginal {
     color: var(--text-middle-color);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .priceChangeWrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
+    font-size: 0.85rem;
 }
 
 .changeIcon {
@@ -72,4 +80,9 @@
 
 .priceChangePercent {
     color: color-mix(in srgb, currentColor 65%, black);
+    text-align: end;
+}
+
+.priceChangeInfo {
+    
 }

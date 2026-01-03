@@ -8,10 +8,6 @@
     padding: 10px;
 }
 
-.content {
-}
-
-
 .headerWrapper {
     grid-column: 1 / 3;
     height: 50px;

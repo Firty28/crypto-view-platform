@@ -9,7 +9,7 @@ import { useState } from "react";
 
 export function CryptoItem({ favourites, cryptoId, image, name, price, priceChange, priceChangeDirection, symbol }: ICryptoItem) {
 
-    const [favour, setFavour] = useState<boolean>(false)
+    const [favour, setFavour] = useState<boolean>(favourites)
 
     return (
         <li className={style.cryptoItem}>
@@ -17,20 +17,17 @@ export function CryptoItem({ favourites, cryptoId, image, name, price, priceChan
                 {favour ? <FavouritesIconFill/> : <FavouritesIconOutline/> }
             </div>
             <div className={style.cryptoInfo}>
-                <div className={style.cryptoIcon}></div>
+                <div className={style.cryptoIcon}>
+                    <img src={image} alt="" />
+                </div>
                 <div className={style.cryptoNameInfo}>
-                    <div className={style.symbol}>{symbol}</div>
-                    <div className={style.nameOriginal}>{name}</div>
+                    <div className={style.symbol}>{symbol.toUpperCase()}</div>
+                    {/* <div className={style.nameOriginal}>{name}</div> */}
                 </div>
             </div>
             <div className={style.priceChangeWrapper}>
-                {priceChangeDirection === "up" ?
-                    <ChangeUpIcon className={style.changeIcon} />
-                    :
-                    <ChangeDownIcon className={style.changeIcon} />
-                }
                 <div className={`${style.priceChangeInfo} ${priceChange >= 0 ? style.changeUp : style.changeDown}`}>
-                    <div className={style.priceChange}>{priceChange}</div>
+                    <div className={style.priceChange}>{priceChange && priceChange.toFixed(5)}</div>
                     <div className={style.priceChangePercent}>10%</div>
                 </div>
             </div>
