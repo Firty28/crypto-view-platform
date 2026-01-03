@@ -2,7 +2,7 @@
     display: grid;
     gap: 10px;
     align-items: center;
-    grid-template-columns: 30px 1fr 1fr 1fr;
+    grid-template-columns: 30px 1.5fr 1fr 1fr;
     padding: 10px;
     color: white;
 }
@@ -25,11 +25,17 @@
 .cryptoInfo {
     display: flex;
     align-items: center;
+    
 }
 
 .cryptoIcon {
     width: 32px;
     height: 32px;
+    border-radius: 50%;
+}
+
+.cryptoIcon > * {
+    display: block;
 }
 
 .name {
@@ -47,6 +53,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    font-size: 0.75rem;
 }
 
 .priceChangeWrapper {

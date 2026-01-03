@@ -6,8 +6,11 @@ export interface ICryptoItem {
     symbol: string
     image: string
     price: number
-    priceChangeDirection: "up" | "down" | "same"
     priceChange: number
-    favourites: boolean
+    priceChangePercentage: number
+}
 
+
+export interface ICryptoItemProps extends ICryptoItem {
+    favourites: boolean
 }
