@@ -10,7 +10,7 @@ export function CryptoItem({ favourites, cryptoId, image, name, price, priceChan
     const [favour, setFavour] = useState<boolean>(favourites)
 
     return (
-        <li className={style.cryptoItem} key={cryptoId}>
+        <li className={style.cryptoItem} id={cryptoId}>
             <div className={style.favourites} onClick={() => setFavour(prev => !prev)}>
                 {favour ? <FavouritesIconFill/> : <FavouritesIconOutline/> }
             </div>
