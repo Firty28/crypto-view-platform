@@ -3,14 +3,17 @@ import style from "./cryptoItem.module.css"
 import FavouritesIconOutline from "@shared/assets/icon/favourites.svg?react"
 import FavouritesIconFill from "@shared/assets/icon/favouritesFill.svg?react"
 import { useState } from "react";
+import { useChartStore } from "../../model/storeChart";
 
 
 export function CryptoItem({ favourites, cryptoId, image, name, price, priceChange, symbol, priceChangePercentage }: ICryptoItemProps) {
 
     const [favour, setFavour] = useState<boolean>(favourites)
 
+    const setSymbol = useChartStore((s) => s.setSymbol)
+
     return (
-        <li className={style.cryptoItem} id={cryptoId}>
+        <li className={style.cryptoItem} id={cryptoId} onClick={() => setSymbol(symbol)}>
             <div className={style.favourites} onClick={() => setFavour(prev => !prev)}>
                 {favour ? <FavouritesIconFill/> : <FavouritesIconOutline/> }
             </div>
